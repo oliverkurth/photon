@@ -26,11 +26,9 @@ Patch7:         gosc-fix-vmtoolsd-binary-path.patch
 Patch8:         gosc-force-run-cust-script.patch
 
 BuildRequires:  glib-devel
-BuildRequires:  xerces-c-devel
 BuildRequires:  libxml2-devel
 BuildRequires:  xmlsec1-devel
 BuildRequires:  libltdl-devel
-BuildRequires:  xml-security-c-devel
 BuildRequires:  libdnet-devel
 BuildRequires:  libmspack-devel
 BuildRequires:  Linux-PAM-devel
@@ -43,11 +41,9 @@ BuildRequires:  libtirpc-devel
 BuildRequires:  xmlsec1-devel
 
 Requires:       fuse
-Requires:       xerces-c
 Requires:       libdnet
 Requires:       libmspack
 Requires:       glib
-Requires:       xml-security-c
 Requires:       openssl
 Requires:       systemd
 Requires:       libstdc++
@@ -147,6 +143,8 @@ fi
 %{_libdir}/*.so
 
 %changelog
+*   Wed Aug 12 2020 Oliver Kurth <okurth@vmware.com>
+-   remove xerces and xml-security dependencies
 *   Fri Jun 19 2020 Keerthana K <keerthanak@vmware.com> 11.1.0-3
 -   Update gosc FORCE-RUN-CUST-SCRIPT to DEFAULT-RUN-POST-CUST-SCRIPT.
 *   Mon Jun 08 2020 Keerthana K <keerthanak@vmware.com> 11.1.0-2
